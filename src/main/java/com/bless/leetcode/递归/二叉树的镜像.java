@@ -1,4 +1,4 @@
-package com.bless.leetcode.回溯;
+package com.bless.leetcode.递归;
 
 public class 二叉树的镜像 {
     public class TreeNode {
