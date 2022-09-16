@@ -14,7 +14,7 @@ public class 统计最高分的节点数目 {
     int nodeNum = 0;
 
     public int countHighestScoreNodes(int[] parents) {
-        child = new List[parents.length];
+        child = new ArrayList[parents.length];
         nodeNum = parents.length;
         // 将父节点列表转换为子节点列表
         for (int i = 0; i < parents.length; i++) {

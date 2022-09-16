@@ -12,7 +12,7 @@ public class 最长公共前缀 {
         }
         String prefix = strs[0];
         for (String s : strs) {
-            prefix = compair(prefix, s);
+            prefix = compare(prefix, s);
             if (prefix.length() == 0) {
                 return "";
             }
@@ -20,7 +20,7 @@ public class 最长公共前缀 {
         return prefix;
     }
 
-    private String compair(String prefix, String s) {
+    private String compare(String prefix, String s) {
         int minLength = Math.min(prefix.length(), s.length());
         String result = "";
         for (int i = 0; i < minLength; i++) {

@@ -22,6 +22,6 @@ public class 替换后的最长重复字符 {
 
     public static void main(String[] args) {
         替换后的最长重复字符 o = new 替换后的最长重复字符();
-        System.out.println(o.characterReplacement("AABABB",1));
+        System.out.println(o.characterReplacement("AABABB", 1));
     }
 }

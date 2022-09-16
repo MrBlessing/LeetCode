@@ -1,4 +1,4 @@
-package com.bless.leetcode;
+package com.bless.leetcode.递归;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,7 +29,6 @@ public class 组合总和 {
             res.add(new ArrayList<>(temp));
             return;
         }
-        // 去重操作
         for (int i = index; i < candidates.length; i++) {
             if (sum + candidates[i] > target) {
                 break;

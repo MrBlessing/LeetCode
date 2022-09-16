@@ -1,4 +1,4 @@
-package com.bless.leetcode;
+package com.bless.leetcode.递归;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ public class 生成匹配的括号 {
     List<String> result = new ArrayList<>();
 
     public List<String> generateParenthesis(int n) {
-        dfs("", 3, 3);
+        dfs("", n, n);
         return result;
     }
 
@@ -16,6 +16,7 @@ public class 生成匹配的括号 {
             result.add(str);
             return;
         }
+        // )比（多的情况直接退出
         if(open>close){
             return;
         }

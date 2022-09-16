@@ -1,4 +1,4 @@
-package com.bless.leetcode;
+package com.bless.leetcode.双指针;
 
 public class 盛最多水的容器 {
     public int maxArea(int[] height) {

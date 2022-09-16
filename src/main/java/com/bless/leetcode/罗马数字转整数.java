@@ -15,15 +15,15 @@ public class 罗马数字转整数 {
         map.put('D', 500);
         map.put('M', 1000);
         int res = 0;
-        for(int i=0;i<s.length();i++){
+        for (int i = 0; i < s.length(); i++) {
             int cv = map.get(s.charAt(i));
-            if(i!=s.length()-1){
-                int cl = map.get(s.charAt(i+1));
-                if(cl>cv){
+            if (i != s.length() - 1) {
+                int cl = map.get(s.charAt(i + 1));
+                if (cl > cv) {
                     cv = -cv;
                 }
             }
-            res+=cv;
+            res += cv;
         }
         return res;
     }

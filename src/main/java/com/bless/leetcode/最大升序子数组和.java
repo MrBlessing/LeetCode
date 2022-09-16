@@ -8,9 +8,11 @@ public class 最大升序子数组和 {
         while (later < nums.length - 1) {
             int sum = 0;
             for (front = later; front < nums.length; front++) {
+                // 检测是否是升序
                 if (front != later && nums[front - 1] >= nums[front]) {
                     break;
                 }
+                // 是升序的话就算和
                 sum += nums[front];
             }
             maxSum = Math.max(sum, maxSum);
