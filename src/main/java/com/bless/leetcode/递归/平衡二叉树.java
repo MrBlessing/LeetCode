@@ -1,10 +1,10 @@
-package com.bless.leetcode;
+package com.bless.leetcode.递归;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class 二叉树的深度 {
-    public static class TreeNode {
+public class 平衡二叉树 {
+    public class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -12,6 +12,13 @@ public class 二叉树的深度 {
         TreeNode(int x) {
             val = x;
         }
+    }
+
+    public boolean isBalanced(TreeNode root) {
+        if (root == null) {
+            return false;
+        }
+        return Math.abs(maxDepth(root.left) - maxDepth(root.right)) <= 1 && isBalanced(root.left) && isBalanced(root.right);
     }
 
     // 广度遍历
@@ -36,13 +43,5 @@ public class 二叉树的深度 {
             depth++;
         }
         return depth;
-    }
-
-    // 递归解决
-    public int maxDepth2(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
-        return Math.max(maxDepth2(root.left), maxDepth2(root.right)) + 1;
     }
 }
