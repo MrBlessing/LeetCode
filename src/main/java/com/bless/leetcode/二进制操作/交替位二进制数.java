@@ -1,4 +1,4 @@
-package com.bless.leetcode;
+package com.bless.leetcode.二进制操作;
 
 public class 交替位二进制数 {
     public boolean hasAlternatingBits(int n) {

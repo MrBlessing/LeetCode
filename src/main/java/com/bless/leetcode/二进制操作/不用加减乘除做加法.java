@@ -1,4 +1,4 @@
-package com.bless.leetcode;
+package com.bless.leetcode.二进制操作;
 
 public class 不用加减乘除做加法 {
     public int add(int a, int b) {
