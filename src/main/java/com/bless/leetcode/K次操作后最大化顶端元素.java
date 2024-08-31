@@ -2,6 +2,7 @@ package com.bless.leetcode;
 
 public class K次操作后最大化顶端元素 {
     public int maximumTop(int[] nums, int k) {
+
         if (nums.length == 1) {
             if (k % 2 == 0) {
                 return nums[0];
