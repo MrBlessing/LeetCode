@@ -22,6 +22,7 @@ public class 二叉搜索树与双向链表 {
 
     private Node head = new Node(-1);
     private Node list = head;
+    // 指向上一个节点
     private Node pre = null;
 
     public Node treeToDoublyList(Node root) {
@@ -35,6 +36,10 @@ public class 二叉搜索树与双向链表 {
         return head.right;
     }
 
+    /**
+     * 中序遍历
+     * @param root
+     */
     private void dfs(Node root) {
         if (root == null) {
             return;
@@ -51,6 +56,7 @@ public class 二叉搜索树与双向链表 {
     }
 
     public static void main(String[] args) {
+        // 构造搜索二叉树
         Node n1 = new Node(1);
         Node n2 = new Node(2);
         Node n3 = new Node(3);

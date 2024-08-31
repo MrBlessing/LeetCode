@@ -15,21 +15,21 @@ public class 罗马数字转整数 {
         map.put('D', 500);
         map.put('M', 1000);
         int res = 0;
-        for (int i = 0; i < s.length(); i++) {
-            int cv = map.get(s.charAt(i));
-            if (i != s.length() - 1) {
-                int cl = map.get(s.charAt(i + 1));
-                if (cl > cv) {
-                    cv = -cv;
-                }
+        int prevalue = 0;
+        for (int i=s.length()-1;i>=0;i--) {
+            int curValue = map.get(s.charAt(i));
+            if (curValue < prevalue) {
+                res -= curValue;
+            } else {
+                res += curValue;
             }
-            res += cv;
+            prevalue = curValue;
         }
         return res;
     }
 
     public static void main(String[] args) {
         罗马数字转整数 o = new 罗马数字转整数();
-        System.out.println(o.romanToInt("IVIII"));
+        System.out.println(o.romanToInt("LVIII"));
     }
 }

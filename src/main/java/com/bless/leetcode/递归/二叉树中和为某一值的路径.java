@@ -36,11 +36,13 @@ public class 二叉树中和为某一值的路径 {
         return res;
     }
 
+    // 先序遍历
     private void dfs(TreeNode root, int sum, int target) {
         if (root == null) {
             return;
         }
         temp.add(root.val);
+        // 如果到达叶子节点&和达到目标值
         if (sum + root.val == target && root.left == null && root.right == null) {
             res.add(new ArrayList<>(temp));
         }

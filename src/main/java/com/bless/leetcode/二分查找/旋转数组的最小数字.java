@@ -26,4 +26,13 @@ public class 旋转数组的最小数字 {
         }
         return numbers[right];
     }
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 26; i++) {
+            for (int j = 0; j < 37; j++) {
+                System.out.printf("%-3d ",(int) (Math.random() * 30)+30);
+            }
+            System.out.println();
+        }
+    }
 }

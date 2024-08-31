@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有和为 0 且不重复的三元组。
+ * 给你一个包含 n 个整数的数组nums，判断nums中是否存在三个元素 a，b，c ，使得a + b + c = 0 ？请你找出所有和为 0 且不重复的三元组。
  * <p>
  * 注意：答案中不可以包含重复的三元组。
  * <p>
@@ -21,28 +21,26 @@ public class 三数之和 {
         List<List<Integer>> result = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
             // 排除重复
-            if (i != 0 && nums[i - 1] == nums[i]) {
+            if (i != nums.length - 1 && nums[i] == nums[i + 1]) {
                 continue;
             }
-            // 如果连续的三个数字之和大于0 则没有进行下去的必要了
-            if (nums.length - i > 2 && nums[i] + nums[i + 1] + nums[i + 2] > 0) {
+            // 如果连续的三个数字之和大于0 则没有进行下去的必要
+            if (i < nums.length - 2 && nums[i] + nums[i + 1] + nums[i + 2] > 0) {
                 break;
             }
-            for (int j = i + 1, k = nums.length - 1; j < nums.length && k > j; j++) {
+            // 双指针查找合适的数字
+            for (int j = i,k=nums.length-1; j < k; j++) {
                 // 排除重复
-                if (j != i + 1 && nums[j - 1] == nums[j]) {
+                if (j != k - 1 && nums[i] == nums[i + 1]) {
                     continue;
                 }
-                // 找到k值的合适位置
-                while (nums[i] + nums[j] + nums[k] > 0 && k > j) {
+                while (j<k&&nums[i]+nums[j]+nums[k]>0){
                     k--;
                 }
-                if (k <= j) {
-                    break;
+                if(j>k){
+                    continue;
                 }
-                if (nums[i] + nums[j] + nums[k] == 0) {
-                    result.add(Arrays.asList(nums[i], nums[j], nums[k]));
-                }
+
             }
         }
         return result;

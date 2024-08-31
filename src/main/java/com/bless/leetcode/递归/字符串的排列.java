@@ -17,7 +17,7 @@ public class 字符串的排列 {
         // 递归查找
         dfs(s, "");
         System.out.println(res);
-        return res.toArray(String[]::new);
+        return res.toArray(new String[]{});
     }
 
     private void dfs(String str, String temp) {

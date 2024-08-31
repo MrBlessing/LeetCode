@@ -31,6 +31,16 @@ public class 两个链表的第一个公共节点 {
     }
 
     // 双指针
+//    ListNode getIntersectionNode2(ListNode headA, ListNode headB) {
+//        ListNode n1 = headA;
+//        ListNode n2 = headB;
+//        while (n1 != n2) {
+//            n1 = n1 == null ? headB : n1.next;
+//            n2 = n2 == null ? headA : n2.next;
+//        }
+//        return n1;
+//    }
+
     ListNode getIntersectionNode2(ListNode headA, ListNode headB) {
         ListNode n1 = headA;
         ListNode n2 = headB;

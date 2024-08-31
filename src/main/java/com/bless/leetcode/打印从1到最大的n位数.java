@@ -9,7 +9,7 @@ public class 打印从1到最大的n位数 {
     public String[] printNumbers(int n) {
         this.n = n;
         dfs(0, "");
-        return res.toArray(String[]::new);
+        return res.toArray(new String[]{});
     }
 
     private void dfs(int layer, String num) {

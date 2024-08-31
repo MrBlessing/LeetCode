@@ -11,6 +11,8 @@ public class 二叉树的镜像 {
         }
     }
 
+
+    // 后序遍历 先把子节点镜像一下
     public TreeNode mirrorTree(TreeNode root) {
         if (root == null) {
             return null;

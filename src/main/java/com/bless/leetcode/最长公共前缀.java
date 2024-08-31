@@ -33,6 +33,7 @@ public class 最长公共前缀 {
         return result;
     }
 
+
     public static void main(String[] args) {
         最长公共前缀 o = new 最长公共前缀();
         System.out.println(o.longestCommonPrefix(new String[]{"cir", "car"}));
